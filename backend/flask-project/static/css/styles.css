@@ -41,7 +41,7 @@ button:hover {
 
 .translation-box {
     width: 45%; /* Adjust as needed */
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
@@ -71,7 +71,7 @@ button:hover {
     display: block;
     position: absolute;
     pointer-events: none;
-    color: #999; /* Light gray color */
+    color: #ffffff; /* Light gray color */
 }
 
 /* Hide label when input has focus or contains text */
