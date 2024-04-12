@@ -33,3 +33,9 @@ button {
 button:hover {
     background-color: #0080ff; /* Darker shade of button color on hover */
 }
+
+.translation-section {
+    display: flex; /* Use flexbox for layout */
+}
+
+

@@ -82,3 +82,16 @@ function clearTranslationHistory() {
 
 // Call fetchTranslationHistory when the page loads or when the user requests it
 window.onload = fetchTranslationHistory;
+
+
+
+// Function to toggle the visibility of the translation history container
+document.getElementById('show-history-btn').addEventListener('click', function() {
+    var historyContainer = document.getElementById('translation-history-container');
+    if (historyContainer.style.display === 'none') {
+        historyContainer.style.display = 'block';
+        fetchTranslationHistory(); // Fetch and display history when shown
+    } else {
+        historyContainer.style.display = 'none';
+    }
+});
