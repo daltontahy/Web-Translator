@@ -20,8 +20,16 @@
     </header>
 
     <main>
+        <!-- Translation History -->
+        <section id="translation-history">
+            <h2>Translation History</h2>
+            <ul id="history-list"></ul>
+            <!-- Clear History Button -->
+            <button onclick="clearTranslationHistory()">Clear History</button>
+        </section>
+
+        <!-- Translation Form -->
         <section class="translation-section">
-            <!-- Translation Form -->
             <form id="translation-form">
                 <label for="input-text">Enter text to translate:</label><br>
                 <textarea id="input-text" name="input-text" rows="4" cols="50"></textarea><br>
@@ -29,13 +37,14 @@
                 <!-- Translate Button -->
                 <button type="submit" class="cta-button">Translate</button>
             </form>
-            <!-- Language Selection Buttons -->
-            <div id="language-selection">
-                <button onclick="setLanguage('es')">Spanish</button>
-                <button onclick="setLanguage('fr')">French</button>
-                <button onclick="setLanguage('it')">Italian</button>
-                <button onclick="setLanguage('pt')">Portuguese</button>
-            </div>
+            <!-- Language Selection Dropdown -->
+            <select id="language-dropdown">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="it">Italian</option>
+                <option value="pt-br">Portuguese</option>
+            </select>
             <!-- Translated Text -->
             <div id="translated-text" class="translated-text"></div>
         </section>
