@@ -1,16 +1,20 @@
 body {
     background-color: #333; /* Dark background color */
     color: #fff; /* Light text color */
-    font-family: Arial, sans-serif; /* Use a sans-serif font */
+    font-family: 'Roboto', sans-serif; /* Use a sans-serif font */
+    font-weight: 200; /* Adjust the weight value as needed */
 }
 
 h1 {
-    color: #00bfff; /* Vibrant color for headings */
+    color: #ab84ff; /* Vibrant color for headings */
+    font-family: 'Roboto', sans-serif; /* Use a sans-serif font */
+    font-weight: 400; /* Adjust the weight value as needed */
 }
 
-label {
-    color: #ccc; /* Light color for labels */
+.title {
+    font-weight: 300; /* Adjust the weight value as needed */
 }
+
 
 textarea {
     background-color: #444; /* Dark background color for input */

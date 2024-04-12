@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Translation App</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">      </head>    
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Language Translator</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">     
+</head>
+
 <body class="dark-theme">
 
     <header>
-        <h1 class="logo">Translation App</h1>
+        <!-- Logo -->
+        <h1 class="logo">Language Translator</h1>
     </header>
 
     <main>
         <section class="translation-section">
+            <!-- Translation Form -->
             <form id="translation-form">
                 <label for="input-text">Enter text to translate:</label><br>
                 <textarea id="input-text" name="input-text" rows="4" cols="50"></textarea><br>
+                <input type="hidden" id="language" name="language" value="">
+                <!-- Translate Button -->
                 <button type="submit" class="cta-button">Translate</button>
             </form>
+            <!-- Language Selection Buttons -->
+            <div id="language-selection">
+                <button onclick="setLanguage('es')">Spanish</button>
+                <button onclick="setLanguage('fr')">French</button>
+                <button onclick="setLanguage('it')">Italian</button>
+                <button onclick="setLanguage('pt')">Portuguese</button>
+            </div>
+            <!-- Translated Text -->
             <div id="translated-text" class="translated-text"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Translation App. All rights reserved.</p>
+        <!-- Footer Text -->
+        <p>&copy; 2024 Translation App, Dalton Tahy. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../static/script.js"></script>
 
 </body>
