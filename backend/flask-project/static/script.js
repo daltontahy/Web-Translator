@@ -1,7 +1,8 @@
 document.getElementById('translation-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
     var inputText = document.getElementById('input-text').value;
-    var language = document.getElementById('language').value; // Get the selected language
+    var language = "es";
+    language = document.getElementById('language').value; // Get the selected language
 
     // Send AJAX request to translation endpoint
     var xhr = new XMLHttpRequest();
@@ -95,3 +96,42 @@ document.getElementById('show-history-btn').addEventListener('click', function()
         historyContainer.style.display = 'none';
     }
 });
+
+// Number of dots to be placed
+const numDots = 35;
+
+// Function to generate random coordinates
+function getRandomCoordinate(max) {
+    return Math.floor(Math.random() * max);
+}
+
+// Function to check if a point is within a rectangle
+function isPointInsideRect(x, y, rect) {
+    return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+}
+
+
+// Function to create dots
+function createDots() {
+    const body = document.querySelector('body');
+    const bodyWidth = body.offsetWidth;
+    const bodyHeight = body.clientHeight;
+
+    const inputBox = document.getElementById('input-text'); // Assuming your input box has id 'input-text'
+    const inputBoxRect = inputBox.getBoundingClientRect(); // Get the bounding rectangle of the input box
+
+    for (let i = 0; i < numDots; i++) {
+        let dotX = getRandomCoordinate(bodyWidth);
+        let dotY = getRandomCoordinate(bodyHeight);
+
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.style.left = dotX + 'px';
+        dot.style.top = dotY + 'px';
+        body.appendChild(dot);
+    }
+}
+
+
+// Create dots when the page loads
+window.onload = createDots;
