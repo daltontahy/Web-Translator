@@ -97,6 +97,8 @@ document.getElementById('show-history-btn').addEventListener('click', function()
     }
 });
 
+
+/** COMMENT OUT DOTS CODE
 // Number of dots to be placed
 const numDots = 35;
 
@@ -135,3 +137,4 @@ function createDots() {
 
 // Create dots when the page loads
 window.onload = createDots;
+*/

@@ -1,7 +1,7 @@
 body {
     background-image: radial-gradient(circle at center, #171731, #030317); /* Radial gradient from dark gray to lighter gray */
     color: #fff; /* Light text color */
-    font-family: 'Roboto', sans-serif; /* Use a sans-serif font */
+    font-family: Open Sans, sans-serif;
     font-weight: 200; /* Adjust the weight value as needed */
     position: relative; /* Set position to relative */
 }
@@ -50,14 +50,15 @@ button:hover {
     background-color: #0080ff; /* Darker shade of button color on hover */
 }
 
-.translation-section {
+.translation-container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; /* Adjust alignment */
 }
 
 .translation-input {
-    width: 315px; /* Adjust width as needed */
-    height: 185px; /* Adjust height as needed */
+    width: 30%; /* Adjust width as needed */
+    height: 33vh; /* Adjust height as needed */
     border: 1px solid #363644;
     border-radius: 5px;
     padding: 10px;
@@ -70,9 +71,15 @@ button:hover {
     left: 15%; /* Position 50% from the left */
 }
 
+.dropdown-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .translation-output {
-    width: 315px; /* Adjust width as needed */
-    height: 185px; /* Adjust height as needed */
+    width: 30%; /* Adjust width as needed */
+    height: 33vh; /* Adjust height as needed */
     border: 1px solid #363644;
     border-radius: 5px;
     padding: 10px;
@@ -94,26 +101,18 @@ button:hover {
     margin-top: 5px; /* Adjust spacing as needed */
 }
 
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
 .output-label::after {
     content: '';
     display: block;
-    width: 34.2%;
+    width: 100%;
     height: 1px;
     background-color: #ffffff; /* Change to your desired color */
-    margin-top: 0px; /* Adjust spacing as needed */
-}
-
-
-
-
-.translation-box label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.translation-box textarea, .translation-box div {
-    width: 100%;
-    box-sizing: border-box;
+    margin-top: 5px; /* Adjust spacing as needed */
 }
 
 .input-text {
@@ -122,17 +121,39 @@ button:hover {
     resize: none; /* Disable resizing */
     user-select: none; /* Disable text selection */
     outline: none; /* Remove outline */
-    padding-top: 14px; /* Adjust top padding */
+    padding-top: 36px; /* Adjust top padding */
     padding-bottom: 100px; /* Adjust bottom padding */
+    font-family: Open Sans, sans-serif;
+}
+
+.translated-text {
+    resize: none; /* Disable resizing */
+    user-select: none; /* Disable text selection */
+    outline: none; /* Remove outline */
+    padding-top: 12px; /* Adjust top padding */
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    font-weight: 300; /* Adjust the weight value as needed */
+
+
 }
 
 
 /* Style for the label */
 .input-label {
+    position: absolute;
+    display: inline-block; /* Ensure the label occupies only the necessary space */
+    pointer-events: none;
+    color: #ffffff; /* Light gray color */
+    margin-bottom: 5px;
+}
+
+.output-label {
     display: block;
     position: absolute;
     pointer-events: none;
     color: #ffffff; /* Light gray color */
+
 }
 
 /* Hide label when input has focus or contains text */
@@ -144,20 +165,19 @@ button:hover {
 .dropdown-box {
     position: absolute; /* Position absolutely */
     top: 54%; /* Adjust top position */
+    left: 32%; /* Adjust left position */
     border: none; /* Remove border */
-    left: 32%; /* Adjust right position */
     border-radius: 20px; /* Adjust the value as needed */
-    font-family: 'Roboto', sans-serif; /* Replace 'Roboto' with your desired font */
+    font-family: Open Sans, sans-serif; /* Set the font family */
     color: #ffffff; /* Set the text color */
     background-color: rgba(16, 16, 26, 0.3); /* Set the background color with alpha (transparency) */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 120px; /* Set the width as desired */
-    height: 32px; /* Set the height as desired */
 }
 
-
-
-
+.label-dropdown-wrapper {
+    position: relative;
+    width: 165px;
+}

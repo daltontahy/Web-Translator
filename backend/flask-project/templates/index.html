@@ -23,8 +23,20 @@
 
         <section class="translation-section">
             <div class="translation-input">
+                <div class="label-dropdown-wrapper">
                 <!-- Hide label when input has focus or contains text -->
-                <label for="input-text" id="input-label" class="input-label">Enter text to translate:</label><br>
+                <span class="input-label">Enter text to translate:</span>
+                <div class="dropdown-container">
+                    <!-- Language Selection Dropdown -->
+                    <select id="language-dropdown" class="dropdown-box">
+                        <option value="" disabled selected>Select Language</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                </select>
+                </div>
+            </div>
                 <!-- Add input box with static size and remove resizing handle -->
                 <textarea id="input-text" name="input-text" rows="4" cols="50" class="input-text"></textarea>
             </div>
@@ -45,15 +57,6 @@
 
             <!-- Translated Text -->
             <div id="translated-text" class="translated-text"></div>
-            
-            <!-- Language Selection Dropdown -->
-            <select id="language-dropdown" class="dropdown-box">
-                <option value="" disabled selected>Select Language</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <option value="it">Italian</option>
-                <option value="pt">Portuguese</option>
-            </select>
         </section>
 
             <!-- Translation History -->
